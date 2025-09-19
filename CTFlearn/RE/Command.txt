@@ -1,0 +1,56 @@
+- b main -> to break label
+- b *0x... -> break at 0x...
+- b *main+0x99 -> break at main + 0x99, can use integer also, main+99
+
+view register:
+- info registers
+
+view one:
+- p $rax
+
+set value:
+- set $rax = 0x1234
+- set $al = 0xFF
+- set $rsi = $rdi
+
+view flag:
+- info registers eflags
+-> eflags         0x246               [ PF ZF IF ]
+
+set flag:
+can't use set directly because flag is inside a value
+
+To set CF, we know it at 0 bit position, we can do
+set $eflags = $eflags | 0x1
+
+To set ZF, we know it at 6 position, we can do
+set $eflags = $eflags | 0x40
+
+to clear: we do
+set $eflags = $eflags & ~0x40
+
+Flag	Bit Position	Hex
+CF	0		0x001
+PF	2		0x004
+AF	4		0x010
+ZF	6		0x040
+SF	7		0x080
+TF	8		0x100
+IF	9		0x200
+DF	10		0x400
+OF	11		0x800
+
+- mul %rbx -> %rax x %rbx and store low 64 bit to rax, high 64 bit will be stored to rdx
+- div %rbx -> %rdx:%rax / %rbx (so we need to clear rdx before use this) -> quotient stores at %rax, remainder stores at %rdx
+
+
+
+Dealing with QR code file:
+- Using a tool to decode the QR, we might get base64 (might see == at the very end).
+- base64 -d qr.txt > output.elf (To get the ELF file)
+
+
+
+With stripped:
+We can run program then run this command
+- info proc mappings to get PIE

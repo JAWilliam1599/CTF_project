@@ -1,0 +1,10 @@
+Using debug, we can find where it ask for input which is being encapsulated in a func --> hard to find
+
+After input, it will compare with 46 which is the length of the string we need to compare
+
+By inspecting where it uses memcmp, we check the argument and see the key is:
+I'm a very strong key, and you can't guess me.
+
+
+After input, we get the flag:
+HCMUS-CTF{n1mbl3_nlmb1e_nImb!e}

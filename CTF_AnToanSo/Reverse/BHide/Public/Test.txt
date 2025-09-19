@@ -1,0 +1,26 @@
+Cleaned:
+AE 94 7E AE 94 7E | AE 94 | 7E AE 94 7E AE 93 | 7D AD | 92 7C AC 92 7C AC | 92 7A | AA 92 7A AA 92 7A
+
+Secret-hide:
+AF 94 7E AC 94 7E | AE 96 | 7F AC 94 7C AF 91 | 7C AF | 93 7C AC 90 7D AE | 92 7A | AB 90 7A AA 92 78
+0110  0  0  0  1           011  0  						   011  0  0  1  0  0  
+a
+start: 0031EC38
+
+
+a: 0110 0001
+b: 0110 0010
+c: 0110 0011
+d: 0110 0100
+f: 0110 0110
+g: 0110 0111
+h: 0110 1000
+
+
+
+Found the technique:
+
+We have:
+the first difference is at 0031EC36
+Each bytes take out its LSB, use 8 bytes to form a character
+

@@ -1,0 +1,8 @@
+services:
+  mail-leak:
+    build: .
+    ports:
+      - "25003:25003"
+    env_file:
+      - .env
+    restart: unless-stopped

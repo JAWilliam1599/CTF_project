@@ -1,0 +1,124 @@
+{
+  "projectVersion": 1,
+  "files": [
+    "babydroid.apk"
+  ],
+  "treeExpansions": [
+    [
+      "Files",
+      "Inputs",
+      "babydroid.apk"
+    ],
+    [
+      "Source code",
+      "babydroid.apk"
+    ],
+    [
+      "com",
+      "Source code",
+      "babydroid.apk"
+    ],
+    [
+      "Resources",
+      "babydroid.apk"
+    ],
+    [
+      "res",
+      "Resources",
+      "babydroid.apk"
+    ],
+    [
+      "Resources",
+      "babydroid.apk"
+    ],
+    [
+      "res",
+      "Resources",
+      "babydroid.apk"
+    ],
+    [
+      "res",
+      "Resources",
+      "babydroid.apk"
+    ],
+    [
+      "Resources",
+      "babydroid.apk"
+    ],
+    [
+      "res",
+      "Resources",
+      "babydroid.apk"
+    ]
+  ],
+  "codeData": {
+    "comments": [],
+    "renames": []
+  },
+  "openTabs": [
+    {
+      "type": "class",
+      "tabPath": "com.example.babydroid.MainActivity",
+      "subPath": "java",
+      "caret": 2073,
+      "view": {
+        "x": 0,
+        "y": 206
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.example.babydroid.FlagValidator",
+      "subPath": "java",
+      "caret": 749,
+      "view": {
+        "x": 2845,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.example.babydroid.R",
+      "subPath": "java",
+      "caret": 101289,
+      "view": {
+        "x": 0,
+        "y": 43143
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.example.babydroid.Helper",
+      "subPath": "java",
+      "caret": 90,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": true,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    }
+  ],
+  "cacheDir": "C:\\Users\\Minh\\AppData\\Local\\skylot\\jadx\\cache\\projects\\babydroid-68a852bb24183b1f225664db8bcb43ca",
+  "enableLiveReload": false,
+  "searchHistory": [
+    "getString",
+    "last_pa",
+    "0x7f0e002b"
+  ],
+  "pluginOptions": {}
+}

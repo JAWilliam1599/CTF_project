@@ -1,0 +1,20 @@
+This computer is little edian which make the solution being rotated.
+The serial key we found based on these code:
+mov     [rbp+57h+pKey], rax ; pointer to key
+movdqa  xmm0, cs:xmmword_140005700
+movdqu  [rbp+57h+var_20], xmm0
+movups  xmm0, cs:xmmword_140005490 ; 6L74-KQJ28-Z9A4X
+movups  xmmword ptr [rax], xmm0
+mov     ecx, cs:dword_1400054A0 ; ecx = N1-P
+mov     [rax+10h], ecx  ; rax = 6L74-KQJ28-Z9A4X N1-P
+movzx   ecx, cs:word_1400054A4
+mov     [rax+14h], cx   ; rax = 6L74-KQJ28-Z9A4X N1-P T2
+movzx   eax, cs:byte_1400054A6 ; rax = 6L74-KQJ28-Z9A4X N1-P T2 B
+mov     [rdx+16h], al
+mov     byte ptr [rdx+17h], 0 ; NULL
+
+And so, the key is: 6L74-KQJ28-Z9A4XN1-PT2B
+However, we also need to check if the exe file is being compiled in big-edian
+So, another key might be X4A9Z-82JQK-47L6P-1N2TB
+
+Type in the command then we got the correct key is: X4A9Z-82JQK-47L6P-1N2TB

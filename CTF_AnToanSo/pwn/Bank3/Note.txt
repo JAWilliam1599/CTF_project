@@ -1,0 +1,4 @@
+PIE: 0x00007ffff7c28800
+base: 1b6
+
+00007ffff7c289b6

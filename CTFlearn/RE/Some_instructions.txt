@@ -1,0 +1,36 @@
+x64_x86 asm
+- rep (repeat) -> repeat rcx times
+- stos (store string) %rax, $es:($rdi) means store the value of rax into rdi
+- cmp (compare) %rax, %rbx: means to cmp rax and rbx by doing subtraction
+	+ if rax > rbx: no need carry so CF = 0, ZF = 0 (the result is not 0)
+	+ if rax = rbx: then result is 0 -> CF = 0, ZF = 1
+	+ if rax < rbx: then need carry so CF = 1, ZF = 0
+- seta (set if above) %al, means to store %al depends on previous cmp. So al = 1 if rax > rbx or CF = 0, ZF = 0
+- sbb (substract with borrow) $0, %rax means rax = rax - 0 - CF.
+
+if 3 is used
+cmp x, y
+seta %al
+sbb $0, %al
+
+then if x > y, set al = 1. If x = y, al = 0. If x < y, al = -1.
+
+- test (see if any bits are set) %al, %al: means let al & al then change flag based on result:
+if al = 0 -> result = 0 -> ZF = 1
+if al = -1 -> result = 0xFF -> SF (Sign flag) = 1
+
+- jmp means jump to somewhere. 
+	+ jl, js, jg, jns use SF
+	+ jb, ja use ZF (unsigned jump)
+
+
+- scas (scan string), compare a byte to byte %es:(%rdx) 
+
+Callee accepts these arguments
+%rdi: (1st argument)
+%rsi: (2nd argument)
+%rdx: (3rd argument)
+%rcx: (4th argument)
+%r8: (5th argument)
+%r9: (6th argument)
+7th onward is passed on stack.

@@ -1,0 +1,72 @@
+This is a DLL file, we can know this by running in CMD:
+file qJXcUpPEoTWdBAeu.game
+
+We will get .\qJXcUpPEoTWdBAeu.game: PE32 executable for MS Windows 6.00 (DLL), Intel i386, 5 sections
+
+So i will use a python script to load the file (python needs to be in 32 bit)
+
+Before loading the file, we need to know what actually it does
+
+lea     eax, [esp+550h+Buffer]
+push    eax             ; pszPath
+
+It try to push a path -> we don't know where it is
+It then check edx with 0 and 1
+sub     edx, 0
+jz      short loc_100030FB (Check with 0)
+
+sub     edx, 1
+jz      short loc_100030F3
+
+
+if edx is 1, it will use tempPath -> temp folder in window
+
+if edx is 0, it will use csidl as a path. CSIDL here is 0x1A which is AppData/Roaming
+CSIDL Value	Folder Returned
+0x001A		CSIDL_APPDATA → %APPDATA% (Roaming)
+0x001C		CSIDL_LOCAL_APPDATA → AppData\Local
+0x0023		CSIDL_INTERNET_CACHE → AppData\LocalLow
+0x0020		CSIDL_COOKIES → Often under LocalLow
+
+
+So the file is in AppData\Roaming
+
+
+It then takes out the name of the file to 
+push    104h            ; nSize
+push    eax             ; lpFilename
+push    10000000h       ; hModule
+call    ds:GetModuleFileNameA
+lea     eax, [esp+550h+Filename]
+push    eax             ; pszPath
+call    ds:PathRemoveExtensionA
+lea     eax, [esp+550h+Filename]
+push    eax             ; pszPath
+call    ds:PathFindFileNameA
+mov     esi, eax
+xorps   xmm0, xmm0
+
+Add CTF to the name and some attributes before create the file
+push    offset PrefixString ; "CTF"
+lea     eax, [esp+55Ch+Buffer]
+push    eax             ; lpPathName
+call    ds:GetTempFileNameW
+push    0               ; hTemplateFile
+push    82h             ; dwFlagsAndAttributes
+push    2               ; dwCreationDisposition
+push    0               ; lpSecurityAttributes
+push    0               ; dwShareMode
+push    40000000h       ; dwDesiredAccess
+lea     eax, [esp+568h+TempFileName]
+push    eax             ; lpFileName
+call    ds:CreateFileW
+
+Write into the file with key and close. Show a message box
+call    ds:WriteFile
+push    esi             ; hObject
+call    ds:CloseHandle
+push    0               ; uType
+push    offset Caption  ; "Notice ..."
+push    offset Text     ; "Let's play a Hide and Seek game on your"...
+push    0               ; hWnd
+call    ds:MessageBoxA

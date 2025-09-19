@@ -1,0 +1,45 @@
+We use IDA to disassemble the first 000.dll file and find PrintFlag function.
+Rather than a code, it is a stub so there might be only 1 real PrintFlag function.
+
+We write a code to start load PrintFlag from each DLL but nothing is print.
+
+We use SHA to encode a text section in dll file. We group those that has the same SHA.
+
+By that, we have these suspicious DLLs file:
+Sections: 3ba80e5da813a28bd29ebc437a73b859 → ['033.dll']
+Sections: 8f018867a46ccc0ea3e89762b13c41c5 → ['038.dll', '134.dll']
+Sections: eaed270a8ac05cb084a6164aaae4ef17 → ['045.dll']
+Sections: f60f1838a3da1788ebfd2e520c9fa8c4 → ['067.dll']
+Sections: be02e91ad9c24f7d7b48dd9811c73639 → ['090.dll']
+Sections: f89198fee4ce05248bcf9a01452f4e8b → ['094.dll']
+Sections: a8c98c237c2bce193111db0f836a263e → ['135.dll']
+Sections: 5303aa0ed9a2159902757a5bfaabbc74 → ['168.dll']
+Sections: 9cdc61529017028f6c757cb2e55d90ac → ['176.dll']
+Sections: ce0049255aaa54e28cb11ea56dad682a → ['196.dll', '625.dll']
+Sections: 86b866b9871209427c3eee83570f3508 → ['226.dll']
+Sections: fadf2b8163a4601251e122040d037863 → ['235.dll']
+Sections: 72272b8e1a3204e782d0df8d9c6cf5e3 → ['240.dll', '677.dll']
+Sections: 64a5225c84367fce3edb34aec34adbe7 → ['276.dll', '581.dll', '690.dll', '786.dll']
+Sections: 58aa3df206be6e844db8121b5d8b7acb → ['438.dll', '758.dll', '788.dll']
+Sections: 8bfe64a8e37f53dce112cef7dafdf522 → ['439.dll']
+Sections: 2a99c7b0940c109e6b4a4ce74c1e6eaf → ['496.dll']
+Sections: 15f5a296b21895c45962cc28682889ca → ['530.dll']
+Sections: e4f4f3e8fb3fc2ee23cfff9554661539 → ['626.dll']
+Sections: 4fe461dfcf2eff035627ba3178139a1e → ['634.dll']
+Sections: 2fa78f344340bceddb5b8cde58903f63 → ['707.dll']
+Sections: 96ea56b2565e0c523b55003192fe599f → ['878.dll']
+Sections: ad99b00d102fffe56a4a2242f3a4aa0a → ['889.dll']
+Sections: ae0fdd2930c718c29a7a9d3d00ccdadf → ['921.dll']
+Sections: 9306990119c74d26b6a4c4ca7337bf36 → ['925.dll']
+
+
+Checking 033.dll, we saw a line:
+mov     eax, 48h ; 'H'
+
+So, we do the same for file 038.dll and 134.dll
+mov     eax, 43h ; 'C'
+
+
+So, we group those dll files in ascending order and automate extract the value.
+we find the flag:
+HCMUS-CTF{m4K3_|)lL_m0r3_f|_|nNY}

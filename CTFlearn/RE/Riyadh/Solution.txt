@@ -1,0 +1,21 @@
+_Z4Msg1Pc: Welcome...
+_Z4Msg2Pc: Usage: Riyadh flag
+_Z4Msg3Pc: CTFlearn{Reversing_Is_Easy}
+_Z4Msg4Pc: You found the false flag!  It's not that easy dude[...]
+_Z4Msg5Pc: CTFlearn{Masmak_Fortress_1865}
+_Z4Msg6Pc: You entered the wrong flag :-(
+
+
+if no arguments is passed, it will check cmp r12d, 1 (means no arguments), then it will print Usage: Riyadh flag
+
+- rep stos %rax, (%es:%rdi)
+
+stos means store string, or store a value in rax into rdi (stosb means byte, stosw means word, stosd means doubleword, stosq means quad)
+rep means repeat rcx times
+- rdi after being set will move based on DF (direction flag), if 0 then it means to move forward 8 bytes
+
+So, if:
+mov rax, 0
+mov rcx, 1000
+mov rdi, 0x1234		# destination 0x1234 in memory
+rep stosq		# sets 1000 * 8 = 8000 bytes to 0

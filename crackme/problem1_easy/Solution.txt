@@ -1,0 +1,2 @@
+username: Nick ;easy to find, it push offset into the stack
+password: 4ACE00F ;easy to find, below Nick, there is also a line where it push offset into the stack

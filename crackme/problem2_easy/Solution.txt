@@ -1,0 +1,9 @@
+Username is a string: in assembly, it was declared as a byte
+Password is a 4-byte dword in assembly.
+
+There is a loc that try to compare the pointer of the head of username and the end where rax is the head and r8 is the end
+It take the ASCII of the char and put it into edx (add edx, ecx)
+
+After that, it compare edx with the password.
+
+So password is the sum of all string of Username.

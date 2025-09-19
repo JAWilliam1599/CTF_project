@@ -1,0 +1,99 @@
+Reverse .APK file
+
+Using jadx reversing we have source code in java which is easier to read in assembly
+We have this line:
+
+if (flag.startsWith("HCMUS-CTF{") && flag.charAt(19) == '_' && flag.length() == 37 && flag.toLowerCase().substring(10).startsWith("this_is_") && flag.charAt(((int) (MagicNum.obtainY() * Math.pow(MagicNum.obtainX(), MagicNum.obtainY()))) + 2) == flag.charAt(((int) Math.pow(Math.pow(2.0d, 2.0d), 2.0d)) + 3) && new StringBuilder(flag).reverse().toString().toLowerCase().substring(1).startsWith(ctx.getString(R.string.last_part)) && new StringBuilder(flag).reverse().toString().charAt(0) == '}' && Helper.ran(flag.toUpperCase().substring((MagicNum.obtainY() * MagicNum.obtainX() * MagicNum.obtainY()) + 2, (int) (Math.pow(MagicNum.obtainZ(), MagicNum.obtainX()) + 1.0d))).equals("ERNYYL") && flag.toLowerCase().charAt(18) == 'a' && flag.charAt(18) == flag.charAt(28) && flag.toUpperCase().charAt(27) == flag.toUpperCase().charAt(28) + 1) {
+            return flag.substring(10, flag.length() - 1).matches(result);
+        }
+
+Follow MagicNum, we have:
+public class MagicNum {
+    public static int obtainX() {
+        return 2;
+    }
+
+    public static int obtainY() {
+        return 3;
+    }
+
+    public static int obtainZ() {
+        return 5;
+    }
+}
+
+
+Let's convert to different condition:
+- flag.startsWith("HCMUS-CTF{") -> The flag always starts with HCMUS-CTF{ (10 character)
+- flag.charAt(19) == '_' -> The character at 19 is _
+- flag.length() == 37 -> the length of flag is 37
+- flag.toLowerCase().substring(10).startsWith("this_is_") -> the code now is HCMUS-CTF{this_is_
+
+flag.charAt(((int) (3 * Math.pow(2, 3))) + 2) == flag.charAt(((int) Math.pow(Math.pow(2.0d, 2.0d), 2.0d)) + 3)
+Convert again: flag.charAt(26) == flag.charAt(19) -> the character at 26 is _
+
+- new StringBuilder(flag).reverse().toString().toLowerCase().substring(1).startsWith(ctx.getString(R.string.last_part)) && new StringBuilder(flag).reverse().toString().charAt(0) == '}' && Helper.ran(flag.toUpperCase().substring(20, 26).equals("ERNYYL")
+
+    public static String ran(String s) {
+        String out = "";
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c >= 'a' && c <= 'm') {
+                c = (char) (c + '\r');
+            } else if (c >= 'A' && c <= 'M') {
+                c = (char) (c + '\r');
+            } else if (c >= 'n' && c <= 'z') {
+                c = (char) (c - '\r');
+            } else if (c >= 'N' && c <= 'Z') {
+                c = (char) (c - '\r');
+            }
+            out = out + c;
+        }
+        return out;
+    }
+So if it is larger than N, subtract 13, if not then add 13
+e -> r
+r -> e
+n -> a
+y -> l
+y -> l
+l -> y
+
+ERNYYL -> really
+
+character at 18 is a, so the code is: HCMUS-CTF{this_is_a_really_ba} (28 equals 18)
+The 27 is a + 1 so it is a 'b'
+
+Now, let's find the last 10 characters:
+
+return flag.substring(10, flag.length() - 1).matches(result); (means from this_is_a_ernyyl_'a)
+and: String result = Helper.retriever();
+and: 
+public static String retriever() {
+        StringBuilder sb;
+        String str;
+        String r = "";
+        boolean upper = true;
+        for (int i = 0; i < 26; i++) {
+            if (upper) {
+                sb = new StringBuilder();
+                sb.append(r);
+                str = "[A-Z_]";
+            } else {
+                sb = new StringBuilder();
+                sb.append(r);
+                str = "[a-z_]";
+            }
+            sb.append(str);
+            r = sb.toString();
+            upper = !upper;
+        }
+        return r;
+    }
+
+
+The code tries to build a string pattern, it will switches between uppercase or underscore and lowercase or underscore
+
+Then we found the ctx.getString(R.string.last_part) = <string name="last_part">ver_cis</string>
+
+So the last flag: HCMUS-CTF{ThIs_iS_A_ReAlLy_bAsIc_rEv} (28 equals 18)

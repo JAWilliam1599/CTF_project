@@ -1,0 +1,7 @@
+some flag: CTFlearn{Prince_Princess_Thaketa}
+
+cmp: input with len 0x1c
+cmp: 0x11 is _
+cmp: 0x16 is _
+
+r CTFlearn{Princess_Maha_Devi}

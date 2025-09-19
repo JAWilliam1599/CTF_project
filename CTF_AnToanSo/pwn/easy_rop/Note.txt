@@ -1,0 +1,9 @@
+We reverse and see that it ask to access win to get the flag from bin/sh
+
+we will exploit and access that by overriding the return address from the function bof. This function fget normally can not be exploited but since we only allocate 16 character from:
+sub     rsp, 10h
+
+And fget can accept 512 characters, so we can overriding return address.
+
+
+It asks us to save the present so when we get to win, we can pass.

@@ -1,0 +1,27 @@
+At first, file pack is being encrypted based on its extension .enc and 4 hex value 4d 5c 5e 56 (M\^V)
+
+A normal PACK file has the first 4 value is "PACK" (50 41 43 4B)
+
+Normally, it could be XOR or AES encrypt, so we check for XOR first:
+
+4d XOR 50 = 1d
+5c XOR 41 = 1d
+5e XOR 43 = 1d
+56 XOR 4b = 1d
+
+So the file is XOR with 1d
+
+So we write a python code that take each byte and XOR with 1d, then write back to a file with extension .PACK
+
+
+After that, we create a new folder to init a new git using command init git
+
+Then, we copy pack file and ref (contains branch) to appropriate location.
+
+Then we use a command to generate index file based on .PACK:
+git index-pack .git/objects/pack/<name_file>.pack
+
+Then we use git checkout master and git log and see that it works.
+
+We check folder and see a file txt that contains flag:
+HCMUS-CTF{securely_protect3d_by_g1t}

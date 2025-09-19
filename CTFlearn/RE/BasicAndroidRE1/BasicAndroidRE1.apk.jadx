@@ -1,0 +1,68 @@
+{
+  "projectVersion": 1,
+  "files": [
+    "BasicAndroidRE1.apk"
+  ],
+  "treeExpansions": [
+    [
+      "Source code",
+      "BasicAndroidRE1.apk"
+    ],
+    [
+      "com.example.secondapp",
+      "Source code",
+      "BasicAndroidRE1.apk"
+    ],
+    [
+      "com.example.secondapp.R",
+      "com.example.secondapp",
+      "Source code",
+      "BasicAndroidRE1.apk"
+    ],
+    [
+      "com.example.secondapp.R.string",
+      "com.example.secondapp.R",
+      "com.example.secondapp",
+      "Source code",
+      "BasicAndroidRE1.apk"
+    ]
+  ],
+  "codeData": {
+    "comments": [],
+    "renames": []
+  },
+  "openTabs": [
+    {
+      "type": "class",
+      "tabPath": "com.example.secondapp.MainActivity",
+      "subPath": "java",
+      "caret": 1008,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.example.secondapp.R",
+      "subPath": "java",
+      "caret": 63418,
+      "view": {
+        "x": 0,
+        "y": 14940
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    }
+  ],
+  "cacheDir": "C:\\Users\\Minh\\AppData\\Local\\skylot\\jadx\\cache\\projects\\BasicAndroidRE1-d9e449578c78856deb7344fc59960458",
+  "enableLiveReload": false,
+  "searchHistory": [],
+  "pluginOptions": {}
+}

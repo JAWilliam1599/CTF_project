@@ -1,0 +1,4 @@
+*.o
+*.coff
+nachos-3.4/code/*/nachos
+gnu-decstation-ultrix/

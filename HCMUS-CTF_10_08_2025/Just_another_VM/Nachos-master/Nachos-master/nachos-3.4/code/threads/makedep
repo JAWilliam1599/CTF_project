@@ -1,0 +1,221 @@
+main.o: ../threads/main.cc ../threads/copyright.h ../threads/utility.h \
+ ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h \
+ C:/Code/msys2/ucrt64/include/stdio.h \
+ C:/Code/msys2/ucrt64/include/corecrt_stdio_config.h \
+ C:/Code/msys2/ucrt64/include/corecrt.h \
+ C:/Code/msys2/ucrt64/include/_mingw.h \
+ C:/Code/msys2/ucrt64/include/_mingw_mac.h \
+ C:/Code/msys2/ucrt64/include/_mingw_secapi.h \
+ C:/Code/msys2/ucrt64/include/vadefs.h \
+ C:/Code/msys2/ucrt64/include/sdks/_mingw_ddk.h \
+ C:/Code/msys2/ucrt64/include/_mingw_off_t.h \
+ C:/Code/msys2/ucrt64/include/swprintf.inl \
+ C:/Code/msys2/ucrt64/include/sec_api/stdio_s.h \
+ C:/Code/msys2/ucrt64/include/string.h \
+ C:/Code/msys2/ucrt64/include/crtdefs.h \
+ C:/Code/msys2/ucrt64/include/sec_api/string_s.h ../threads/system.h \
+ ../threads/thread.h ../threads/scheduler.h ../threads/list.h \
+ ../machine/interrupt.h ../threads/list.h ../machine/stats.h \
+ ../machine/timer.h ../threads/utility.h
+list.o: ../threads/list.cc ../threads/copyright.h ../threads/list.h \
+ ../threads/utility.h ../threads/bool.h ../machine/sysdep.h \
+ ../threads/copyright.h C:/Code/msys2/ucrt64/include/stdio.h \
+ C:/Code/msys2/ucrt64/include/corecrt_stdio_config.h \
+ C:/Code/msys2/ucrt64/include/corecrt.h \
+ C:/Code/msys2/ucrt64/include/_mingw.h \
+ C:/Code/msys2/ucrt64/include/_mingw_mac.h \
+ C:/Code/msys2/ucrt64/include/_mingw_secapi.h \
+ C:/Code/msys2/ucrt64/include/vadefs.h \
+ C:/Code/msys2/ucrt64/include/sdks/_mingw_ddk.h \
+ C:/Code/msys2/ucrt64/include/_mingw_off_t.h \
+ C:/Code/msys2/ucrt64/include/swprintf.inl \
+ C:/Code/msys2/ucrt64/include/sec_api/stdio_s.h \
+ C:/Code/msys2/ucrt64/include/string.h \
+ C:/Code/msys2/ucrt64/include/crtdefs.h \
+ C:/Code/msys2/ucrt64/include/sec_api/string_s.h
+scheduler.o: ../threads/scheduler.cc ../threads/copyright.h \
+ ../threads/scheduler.h ../threads/list.h ../threads/utility.h \
+ ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h \
+ C:/Code/msys2/ucrt64/include/stdio.h \
+ C:/Code/msys2/ucrt64/include/corecrt_stdio_config.h \
+ C:/Code/msys2/ucrt64/include/corecrt.h \
+ C:/Code/msys2/ucrt64/include/_mingw.h \
+ C:/Code/msys2/ucrt64/include/_mingw_mac.h \
+ C:/Code/msys2/ucrt64/include/_mingw_secapi.h \
+ C:/Code/msys2/ucrt64/include/vadefs.h \
+ C:/Code/msys2/ucrt64/include/sdks/_mingw_ddk.h \
+ C:/Code/msys2/ucrt64/include/_mingw_off_t.h \
+ C:/Code/msys2/ucrt64/include/swprintf.inl \
+ C:/Code/msys2/ucrt64/include/sec_api/stdio_s.h \
+ C:/Code/msys2/ucrt64/include/string.h \
+ C:/Code/msys2/ucrt64/include/crtdefs.h \
+ C:/Code/msys2/ucrt64/include/sec_api/string_s.h ../threads/thread.h \
+ ../threads/system.h ../machine/interrupt.h ../threads/list.h \
+ ../machine/stats.h ../machine/timer.h ../threads/utility.h
+synch.o: ../threads/synch.cc ../threads/copyright.h ../threads/synch.h \
+ ../threads/thread.h ../threads/utility.h ../threads/bool.h \
+ ../machine/sysdep.h ../threads/copyright.h \
+ C:/Code/msys2/ucrt64/include/stdio.h \
+ C:/Code/msys2/ucrt64/include/corecrt_stdio_config.h \
+ C:/Code/msys2/ucrt64/include/corecrt.h \
+ C:/Code/msys2/ucrt64/include/_mingw.h \
+ C:/Code/msys2/ucrt64/include/_mingw_mac.h \
+ C:/Code/msys2/ucrt64/include/_mingw_secapi.h \
+ C:/Code/msys2/ucrt64/include/vadefs.h \
+ C:/Code/msys2/ucrt64/include/sdks/_mingw_ddk.h \
+ C:/Code/msys2/ucrt64/include/_mingw_off_t.h \
+ C:/Code/msys2/ucrt64/include/swprintf.inl \
+ C:/Code/msys2/ucrt64/include/sec_api/stdio_s.h \
+ C:/Code/msys2/ucrt64/include/string.h \
+ C:/Code/msys2/ucrt64/include/crtdefs.h \
+ C:/Code/msys2/ucrt64/include/sec_api/string_s.h ../threads/list.h \
+ ../threads/system.h ../threads/scheduler.h ../machine/interrupt.h \
+ ../threads/list.h ../machine/stats.h ../machine/timer.h \
+ ../threads/utility.h
+synchlist.o: ../threads/synchlist.cc ../threads/copyright.h \
+ ../threads/synchlist.h ../threads/list.h ../threads/utility.h \
+ ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h \
+ C:/Code/msys2/ucrt64/include/stdio.h \
+ C:/Code/msys2/ucrt64/include/corecrt_stdio_config.h \
+ C:/Code/msys2/ucrt64/include/corecrt.h \
+ C:/Code/msys2/ucrt64/include/_mingw.h \
+ C:/Code/msys2/ucrt64/include/_mingw_mac.h \
+ C:/Code/msys2/ucrt64/include/_mingw_secapi.h \
+ C:/Code/msys2/ucrt64/include/vadefs.h \
+ C:/Code/msys2/ucrt64/include/sdks/_mingw_ddk.h \
+ C:/Code/msys2/ucrt64/include/_mingw_off_t.h \
+ C:/Code/msys2/ucrt64/include/swprintf.inl \
+ C:/Code/msys2/ucrt64/include/sec_api/stdio_s.h \
+ C:/Code/msys2/ucrt64/include/string.h \
+ C:/Code/msys2/ucrt64/include/crtdefs.h \
+ C:/Code/msys2/ucrt64/include/sec_api/string_s.h ../threads/synch.h \
+ ../threads/thread.h
+system.o: ../threads/system.cc ../threads/copyright.h ../threads/system.h \
+ ../threads/utility.h ../threads/bool.h ../machine/sysdep.h \
+ ../threads/copyright.h C:/Code/msys2/ucrt64/include/stdio.h \
+ C:/Code/msys2/ucrt64/include/corecrt_stdio_config.h \
+ C:/Code/msys2/ucrt64/include/corecrt.h \
+ C:/Code/msys2/ucrt64/include/_mingw.h \
+ C:/Code/msys2/ucrt64/include/_mingw_mac.h \
+ C:/Code/msys2/ucrt64/include/_mingw_secapi.h \
+ C:/Code/msys2/ucrt64/include/vadefs.h \
+ C:/Code/msys2/ucrt64/include/sdks/_mingw_ddk.h \
+ C:/Code/msys2/ucrt64/include/_mingw_off_t.h \
+ C:/Code/msys2/ucrt64/include/swprintf.inl \
+ C:/Code/msys2/ucrt64/include/sec_api/stdio_s.h \
+ C:/Code/msys2/ucrt64/include/string.h \
+ C:/Code/msys2/ucrt64/include/crtdefs.h \
+ C:/Code/msys2/ucrt64/include/sec_api/string_s.h ../threads/thread.h \
+ ../threads/scheduler.h ../threads/list.h ../machine/interrupt.h \
+ ../threads/list.h ../machine/stats.h ../machine/timer.h \
+ ../threads/utility.h
+thread.o: ../threads/thread.cc ../threads/copyright.h ../threads/thread.h \
+ ../threads/utility.h ../threads/bool.h ../machine/sysdep.h \
+ ../threads/copyright.h C:/Code/msys2/ucrt64/include/stdio.h \
+ C:/Code/msys2/ucrt64/include/corecrt_stdio_config.h \
+ C:/Code/msys2/ucrt64/include/corecrt.h \
+ C:/Code/msys2/ucrt64/include/_mingw.h \
+ C:/Code/msys2/ucrt64/include/_mingw_mac.h \
+ C:/Code/msys2/ucrt64/include/_mingw_secapi.h \
+ C:/Code/msys2/ucrt64/include/vadefs.h \
+ C:/Code/msys2/ucrt64/include/sdks/_mingw_ddk.h \
+ C:/Code/msys2/ucrt64/include/_mingw_off_t.h \
+ C:/Code/msys2/ucrt64/include/swprintf.inl \
+ C:/Code/msys2/ucrt64/include/sec_api/stdio_s.h \
+ C:/Code/msys2/ucrt64/include/string.h \
+ C:/Code/msys2/ucrt64/include/crtdefs.h \
+ C:/Code/msys2/ucrt64/include/sec_api/string_s.h ../threads/switch.h \
+ ../threads/synch.h ../threads/list.h ../threads/system.h \
+ ../threads/scheduler.h ../machine/interrupt.h ../threads/list.h \
+ ../machine/stats.h ../machine/timer.h ../threads/utility.h
+utility.o: ../threads/utility.cc ../threads/copyright.h \
+ ../threads/utility.h ../threads/bool.h ../machine/sysdep.h \
+ ../threads/copyright.h C:/Code/msys2/ucrt64/include/stdio.h \
+ C:/Code/msys2/ucrt64/include/corecrt_stdio_config.h \
+ C:/Code/msys2/ucrt64/include/corecrt.h \
+ C:/Code/msys2/ucrt64/include/_mingw.h \
+ C:/Code/msys2/ucrt64/include/_mingw_mac.h \
+ C:/Code/msys2/ucrt64/include/_mingw_secapi.h \
+ C:/Code/msys2/ucrt64/include/vadefs.h \
+ C:/Code/msys2/ucrt64/include/sdks/_mingw_ddk.h \
+ C:/Code/msys2/ucrt64/include/_mingw_off_t.h \
+ C:/Code/msys2/ucrt64/include/swprintf.inl \
+ C:/Code/msys2/ucrt64/include/sec_api/stdio_s.h \
+ C:/Code/msys2/ucrt64/include/string.h \
+ C:/Code/msys2/ucrt64/include/crtdefs.h \
+ C:/Code/msys2/ucrt64/include/sec_api/string_s.h ../threads/stdarg.h
+threadtest.o: ../threads/threadtest.cc ../threads/copyright.h \
+ ../threads/system.h ../threads/utility.h ../threads/bool.h \
+ ../machine/sysdep.h ../threads/copyright.h \
+ C:/Code/msys2/ucrt64/include/stdio.h \
+ C:/Code/msys2/ucrt64/include/corecrt_stdio_config.h \
+ C:/Code/msys2/ucrt64/include/corecrt.h \
+ C:/Code/msys2/ucrt64/include/_mingw.h \
+ C:/Code/msys2/ucrt64/include/_mingw_mac.h \
+ C:/Code/msys2/ucrt64/include/_mingw_secapi.h \
+ C:/Code/msys2/ucrt64/include/vadefs.h \
+ C:/Code/msys2/ucrt64/include/sdks/_mingw_ddk.h \
+ C:/Code/msys2/ucrt64/include/_mingw_off_t.h \
+ C:/Code/msys2/ucrt64/include/swprintf.inl \
+ C:/Code/msys2/ucrt64/include/sec_api/stdio_s.h \
+ C:/Code/msys2/ucrt64/include/string.h \
+ C:/Code/msys2/ucrt64/include/crtdefs.h \
+ C:/Code/msys2/ucrt64/include/sec_api/string_s.h ../threads/thread.h \
+ ../threads/scheduler.h ../threads/list.h ../machine/interrupt.h \
+ ../threads/list.h ../machine/stats.h ../machine/timer.h \
+ ../threads/utility.h ../threads/synch.h
+interrupt.o: ../machine/interrupt.cc ../threads/copyright.h \
+ ../machine/interrupt.h ../threads/list.h ../threads/copyright.h \
+ ../threads/utility.h ../threads/bool.h ../machine/sysdep.h \
+ C:/Code/msys2/ucrt64/include/stdio.h \
+ C:/Code/msys2/ucrt64/include/corecrt_stdio_config.h \
+ C:/Code/msys2/ucrt64/include/corecrt.h \
+ C:/Code/msys2/ucrt64/include/_mingw.h \
+ C:/Code/msys2/ucrt64/include/_mingw_mac.h \
+ C:/Code/msys2/ucrt64/include/_mingw_secapi.h \
+ C:/Code/msys2/ucrt64/include/vadefs.h \
+ C:/Code/msys2/ucrt64/include/sdks/_mingw_ddk.h \
+ C:/Code/msys2/ucrt64/include/_mingw_off_t.h \
+ C:/Code/msys2/ucrt64/include/swprintf.inl \
+ C:/Code/msys2/ucrt64/include/sec_api/stdio_s.h \
+ C:/Code/msys2/ucrt64/include/string.h \
+ C:/Code/msys2/ucrt64/include/crtdefs.h \
+ C:/Code/msys2/ucrt64/include/sec_api/string_s.h ../threads/system.h \
+ ../threads/thread.h ../threads/scheduler.h ../threads/list.h \
+ ../machine/interrupt.h ../machine/stats.h ../machine/timer.h \
+ ../threads/utility.h
+stats.o: ../machine/stats.cc ../threads/copyright.h ../threads/utility.h \
+ ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h \
+ C:/Code/msys2/ucrt64/include/stdio.h \
+ C:/Code/msys2/ucrt64/include/corecrt_stdio_config.h \
+ C:/Code/msys2/ucrt64/include/corecrt.h \
+ C:/Code/msys2/ucrt64/include/_mingw.h \
+ C:/Code/msys2/ucrt64/include/_mingw_mac.h \
+ C:/Code/msys2/ucrt64/include/_mingw_secapi.h \
+ C:/Code/msys2/ucrt64/include/vadefs.h \
+ C:/Code/msys2/ucrt64/include/sdks/_mingw_ddk.h \
+ C:/Code/msys2/ucrt64/include/_mingw_off_t.h \
+ C:/Code/msys2/ucrt64/include/swprintf.inl \
+ C:/Code/msys2/ucrt64/include/sec_api/stdio_s.h \
+ C:/Code/msys2/ucrt64/include/string.h \
+ C:/Code/msys2/ucrt64/include/crtdefs.h \
+ C:/Code/msys2/ucrt64/include/sec_api/string_s.h ../machine/stats.h
+timer.o: ../machine/timer.cc ../threads/copyright.h ../machine/timer.h \
+ ../threads/utility.h ../threads/copyright.h ../threads/bool.h \
+ ../machine/sysdep.h C:/Code/msys2/ucrt64/include/stdio.h \
+ C:/Code/msys2/ucrt64/include/corecrt_stdio_config.h \
+ C:/Code/msys2/ucrt64/include/corecrt.h \
+ C:/Code/msys2/ucrt64/include/_mingw.h \
+ C:/Code/msys2/ucrt64/include/_mingw_mac.h \
+ C:/Code/msys2/ucrt64/include/_mingw_secapi.h \
+ C:/Code/msys2/ucrt64/include/vadefs.h \
+ C:/Code/msys2/ucrt64/include/sdks/_mingw_ddk.h \
+ C:/Code/msys2/ucrt64/include/_mingw_off_t.h \
+ C:/Code/msys2/ucrt64/include/swprintf.inl \
+ C:/Code/msys2/ucrt64/include/sec_api/stdio_s.h \
+ C:/Code/msys2/ucrt64/include/string.h \
+ C:/Code/msys2/ucrt64/include/crtdefs.h \
+ C:/Code/msys2/ucrt64/include/sec_api/string_s.h ../threads/system.h \
+ ../threads/utility.h ../threads/thread.h ../threads/scheduler.h \
+ ../threads/list.h ../machine/interrupt.h ../threads/list.h \
+ ../machine/stats.h ../machine/timer.h

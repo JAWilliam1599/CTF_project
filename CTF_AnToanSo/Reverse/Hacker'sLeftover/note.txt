@@ -1,0 +1,5 @@
+Hint: Cobalt Strike
+
+Hint_2: First 36 bytes
+
+Hint_3: x86 shellcode

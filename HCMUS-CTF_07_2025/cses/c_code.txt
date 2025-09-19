@@ -1,0 +1,65 @@
+main:
+
+const int hund = 100;
+char[100?] choice;
+
+arr = 0x466b(%rip); (where it stores permutation)
+permutation(arr);
+int loops = 0; // sth = -0xc(%rbp)
+
+while(loops <= 6) {
+	cin >> choice;
+	cin.ignore();
+	if (choice == "!") {
+		check_answer();
+	else if (choice == "?") {
+		_Z8questionv(arr, loops);
+		loops++;
+	}
+	else {
+		cout << "Wrong choice.\n";
+		exit();
+	}
+}
+
+
+
+_Z8questionv:
+int[101] query; //query = 0x4b5b(%rip)
+
+memset(query, 0, 101);
+
+fgets(query, 184, cin);	//maybe overflow? but no other c vulnerabilities
+
+index = strcspn(query, "\n"); //Take out the number of character to put "\0"
+query[index] = "\0";
+
+int length = strlen(query); length = -0x74(rbp)
+
+if (length != 100) {
+	cout << "Query must have length of 100.\n";
+	exit();
+}
+
+int i = 0; // i = -0x7c(%rbp)
+while(i <= 99) {
+	if (query[i] != '0' && query[i] != '1') {
+		cout << "Query can only contain '0' and '1'\n";
+		exit();
+	}
+	i++;
+}
+
+int k = 0;			// k = -0x78(%rbp) above i;
+
+while(k <= 99) {
+	int val = arr[k];
+	val--;
+	
+	temp[k] = query[val];
+	k++;
+}
+
+cout << temp << endl;
+
+0000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000
